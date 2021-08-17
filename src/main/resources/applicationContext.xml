@@ -13,11 +13,30 @@
           class="com.revyakina.springcourse.RockMusic">
     </bean>
 
+    <bean id="list1"
+          class="com.revyakina.springcourse.RockMusic">
+    </bean>
+
+    <bean id="list2"
+          class="com.revyakina.springcourse.ClassicalMusic">
+    </bean>
+
+    <bean id="list3"
+          class="com.revyakina.springcourse.RapMusic">
+    </bean>
+
     <bean id="musicPlayer"
           class="com.revyakina.springcourse.MusicPlayer">
         <property name="music" ref = "musicBean"/>
         <property name="name" value = "${musicPlayer.name}"/>
         <property name="volume" value = "${musicPlayer.volume}"/>
+        <property name="musicList" >
+            <list>
+                <ref bean="list1" />
+                <ref bean="list2" />
+                <ref bean="list3" />
+            </list>
+        </property>
     </bean>
 
 </beans>
