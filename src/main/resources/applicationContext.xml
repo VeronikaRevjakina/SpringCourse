@@ -14,6 +14,8 @@
     <bean id="musicPlayer"
           class="com.revyakina.springcourse.MusicPlayer">
         <property name="music" ref = "musicBean"/>
+        <property name="name" value = "someName"/>
+        <property name="volume" value = "5"/>
     </bean>
 
 </beans>
