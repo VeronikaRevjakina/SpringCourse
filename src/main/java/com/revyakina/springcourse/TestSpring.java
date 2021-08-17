@@ -19,6 +19,10 @@ public class TestSpring {
         System.out.println(secondMusicPlayer.toString());
 //        firstMusicPlayer.playMusicList();
 
+        firstMusicPlayer.setVolume(10);
+
+        System.out.println(firstMusicPlayer.getVolume());
+        System.out.println(secondMusicPlayer.getVolume());
         context.close();
     }
 }
