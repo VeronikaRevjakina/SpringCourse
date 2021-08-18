@@ -6,38 +6,6 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
-
-    <context:property-placeholder location="classpath:musicPlayer.properties"/>
-
-    <bean id="musicBean"
-          class="com.revyakina.springcourse.RockMusic">
-    </bean>
-
-    <bean id="list1"
-          class="com.revyakina.springcourse.RockMusic">
-    </bean>
-
-    <bean id="list2"
-          class="com.revyakina.springcourse.ClassicalMusic">
-    </bean>
-
-    <bean id="list3"
-          class="com.revyakina.springcourse.RapMusic">
-    </bean>
-
-    <bean id="musicPlayer"
-          class="com.revyakina.springcourse.MusicPlayer">
-        <property name="music" ref = "musicBean"/>
-        <property name="name" value = "${musicPlayer.name}"/>
-        <property name="volume" value = "${musicPlayer.volume}"/>
-        <property name="musicList" >
-            <list>
-                <ref bean="list1" />
-                <ref bean="list2" />
-                <ref bean="list3" />
-            </list>
-        </property>
-    </bean>
-
+    <context:component-scan base-package="com.revyakina.springcourse"/>
 </beans>
 
